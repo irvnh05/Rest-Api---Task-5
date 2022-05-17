@@ -20,7 +20,7 @@ Route::post('login', 'API\RegisterController@login');
 // Route::post('/post/store', 'PostController@store');
 
 Route::prefix('post')
-    // ->middleware('auth:api')
+    ->middleware('auth:api')
     ->group( function () {
         Route::resource('article', 'API\ArticleController');
         Route::resource('category', 'API\CategoryController');
